@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mccourse:alexandrite_block",
+    "mccourse:raw_alexandrite_block",
+    "mccourse:alexandrite_ore"
+  ]
+}
