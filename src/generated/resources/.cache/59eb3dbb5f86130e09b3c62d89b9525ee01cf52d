@@ -1,6 +1,8 @@
-// 1.20	2023-06-12T16:17:56.4514695	Loot Tables
+// 1.20	2023-06-12T16:34:57.8237431	Loot Tables
 3c04bafc8e377b8b3a0acec4fb355ebe506bd32a data/mccourse/loot_tables/blocks/alexandrite_block.json
+5ee80a3f0dae7a738f12360934f26b319920a8a3 data/mccourse/loot_tables/blocks/alexandrite_button.json
 173e2b752487e499d222c8b2083fdff6389c81f0 data/mccourse/loot_tables/blocks/alexandrite_ore.json
+076fdc99e96842a101f75e205952bfdb829ae8e8 data/mccourse/loot_tables/blocks/alexandrite_pressure_plate.json
 cc29b2bba8edc06773081536354828bdfaa3167c data/mccourse/loot_tables/blocks/alexandrite_slab.json
 70fab8983f4f8d670d47e55156fc769bf1f8a132 data/mccourse/loot_tables/blocks/alexandrite_stairs.json
 b0965d5fcc738eee398078e790faa2b0f6bff73e data/mccourse/loot_tables/blocks/deepslate_alexandrite_ore.json
