@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "alexandrite",
+  "key": {
+    "#": {
+      "item": "mccourse:raw_alexandrite"
+    }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "item": "mccourse:raw_alexandrite_block"
+  },
+  "show_notification": true
+}
