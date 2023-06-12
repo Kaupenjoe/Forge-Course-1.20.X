@@ -3,5 +3,7 @@
   "item.mccourse.raw_alexandrite": "Raw Alexandrite",
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
-  "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite"
+  "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
+
+  "creativetab.course_tab": "Course Tab"
 }
