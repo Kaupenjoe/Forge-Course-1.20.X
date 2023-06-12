@@ -1,10 +1,13 @@
-// 1.20	2023-06-12T16:34:57.8237431	Loot Tables
+// 1.20	2023-06-12T16:59:08.6484925	Loot Tables
 3c04bafc8e377b8b3a0acec4fb355ebe506bd32a data/mccourse/loot_tables/blocks/alexandrite_block.json
 5ee80a3f0dae7a738f12360934f26b319920a8a3 data/mccourse/loot_tables/blocks/alexandrite_button.json
+bb59fb43816df0a2aacb8ab1aeb2a8a995f55dcc data/mccourse/loot_tables/blocks/alexandrite_fence.json
+d06987e5549a3aae053fe9a160d4d4e00e996707 data/mccourse/loot_tables/blocks/alexandrite_fence_gate.json
 173e2b752487e499d222c8b2083fdff6389c81f0 data/mccourse/loot_tables/blocks/alexandrite_ore.json
 076fdc99e96842a101f75e205952bfdb829ae8e8 data/mccourse/loot_tables/blocks/alexandrite_pressure_plate.json
 cc29b2bba8edc06773081536354828bdfaa3167c data/mccourse/loot_tables/blocks/alexandrite_slab.json
 70fab8983f4f8d670d47e55156fc769bf1f8a132 data/mccourse/loot_tables/blocks/alexandrite_stairs.json
+5eecd4a5f2feed1ed65dd975a265293443f3169a data/mccourse/loot_tables/blocks/alexandrite_wall.json
 b0965d5fcc738eee398078e790faa2b0f6bff73e data/mccourse/loot_tables/blocks/deepslate_alexandrite_ore.json
 8e9ff1289ff28f5b041d5d2ed6c38384d2bc8386 data/mccourse/loot_tables/blocks/end_stone_alexandrite_ore.json
 07b730d603378c298d6630dd5c2fd8c3398ecea7 data/mccourse/loot_tables/blocks/nether_alexandrite_ore.json
