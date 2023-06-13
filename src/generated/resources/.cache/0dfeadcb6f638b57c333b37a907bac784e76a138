@@ -1,9 +1,10 @@
-// 1.20.1	2023-06-13T09:08:21.3414445	Item Models: mccourse
+// 1.20.1	2023-06-13T09:35:48.0020757	Item Models: mccourse
 71badbc60185c294e740a7e69a688a1a52a23e11 assets/mccourse/models/item/alexandrite.json
 2708264e5c6062ce8fed21db45430ddac33ffa5c assets/mccourse/models/item/alexandrite_axe.json
 cfc705788577468640df77a99d391497448608d0 assets/mccourse/models/item/alexandrite_button.json
 b8e1cf935d31db078f2d1b9f2a85a226774bb2a6 assets/mccourse/models/item/alexandrite_door.json
 baa0c13ac61011d19305b6ac539291971b668c8c assets/mccourse/models/item/alexandrite_fence.json
+c6877a462ee5e94b0dc7583818f058cedccf54eb assets/mccourse/models/item/alexandrite_hammer.json
 fc9a2b04d13ded16522c28312bc4d5fd93ba47fe assets/mccourse/models/item/alexandrite_hoe.json
 0cc797b0bbb477ddb6a2d33ddf28cdf737d82586 assets/mccourse/models/item/alexandrite_paxel.json
 e5ff91a4c82eff3f90e101d271cd2cadd04fdab1 assets/mccourse/models/item/alexandrite_pickaxe.json
