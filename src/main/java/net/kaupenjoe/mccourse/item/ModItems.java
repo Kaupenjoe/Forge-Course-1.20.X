@@ -1,10 +1,7 @@
 package net.kaupenjoe.mccourse.item;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
-import net.kaupenjoe.mccourse.item.custom.FuelItem;
-import net.kaupenjoe.mccourse.item.custom.HammerItem;
-import net.kaupenjoe.mccourse.item.custom.MetalDetectorItem;
-import net.kaupenjoe.mccourse.item.custom.PaxelItem;
+import net.kaupenjoe.mccourse.item.custom.*;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,7 +27,7 @@ public class ModItems {
             () -> new FuelItem(new Item.Properties(), 200));
 
     public static final RegistryObject<Item> ALEXANDRITE_SWORD = ITEMS.register("alexandrite_sword",
-            () -> new SwordItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
+            () -> new SlowingSwordItem(ModToolTiers.ALEXANDRITE, 2, 3, new Item.Properties().durability(256)));
     public static final RegistryObject<Item> ALEXANDRITE_PICKAXE = ITEMS.register("alexandrite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.ALEXANDRITE, 1, 2, new Item.Properties().durability(256)));
     public static final RegistryObject<Item> ALEXANDRITE_SHOVEL = ITEMS.register("alexandrite_shovel",
