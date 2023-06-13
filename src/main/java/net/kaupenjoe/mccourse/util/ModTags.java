@@ -22,6 +22,7 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> METAL_DETECTOR_VALUABLES = tag("metal_detector_valuables");
+        public static final TagKey<Block> NEEDS_ALEXANDRITE_TOOL = tag("needs_alexandrite_tool");
 
 
         private static TagKey<Block> tag(String name) {
