@@ -28,7 +28,6 @@ public class MCCourseMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
-        Registry
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
