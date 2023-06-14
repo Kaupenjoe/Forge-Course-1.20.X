@@ -40,6 +40,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         // simpleItem(ModItems.ALEXANDRITE_LEGGING);
         // simpleItem(ModItems.ALEXANDRITE_BOOTS);
 
+        simpleItem(ModItems.ALEXANDRITE_HORSE_ARMOR);
+
         buttonItem(ModBlocks.ALEXANDRITE_BUTTON, ModBlocks.ALEXANDRITE_BLOCK);
         fenceItem(ModBlocks.ALEXANDRITE_FENCE, ModBlocks.ALEXANDRITE_BLOCK);
         wallItem(ModBlocks.ALEXANDRITE_WALL, ModBlocks.ALEXANDRITE_BLOCK);
