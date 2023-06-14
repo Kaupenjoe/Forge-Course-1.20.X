@@ -1,9 +1,10 @@
-// 1.20.1	2023-06-13T08:57:23.6045485	Block States: mccourse
+// 1.20.1	2023-06-14T10:02:49.0745786	Block States: mccourse
 9b0f59e6a967af477e6f41100bfecb754add6ea2 assets/mccourse/blockstates/alexandrite_block.json
 1fd0895b9aa0e87b67d2c4da0f567f8aa895de30 assets/mccourse/blockstates/alexandrite_button.json
 974428f15970c224b76ef992df827ba4718bb490 assets/mccourse/blockstates/alexandrite_door.json
 8015cb99e83af7b2afefdde8ba149e93b301574b assets/mccourse/blockstates/alexandrite_fence.json
 eeddc4d8ecd6d9f7e2e95ac84bf821027b919a66 assets/mccourse/blockstates/alexandrite_fence_gate.json
+e51c1b033676aee6169baecfde25c6198182b7cf assets/mccourse/blockstates/alexandrite_lamp.json
 9c4eee260ca52ad20ee4522bcb30fc8e1bae9daa assets/mccourse/blockstates/alexandrite_ore.json
 6d8c334c0f5703609509ceef7db0efdde467e0ae assets/mccourse/blockstates/alexandrite_pressure_plate.json
 c0381e27b65f17b222b2cc166b70947eaf892f59 assets/mccourse/blockstates/alexandrite_slab.json
@@ -32,6 +33,8 @@ da183ead76ccbab6eb4bb9e1845bac8c51ed5eed assets/mccourse/models/block/alexandrit
 9910d5867e1135e0155ffd2c5b80a21a131a914a assets/mccourse/models/block/alexandrite_fence_gate_wall_open.json
 525abbfac4038d74e813183d0f617b0f94df1065 assets/mccourse/models/block/alexandrite_fence_post.json
 471f62d6483bb1fd16457fa36846c437bc601e24 assets/mccourse/models/block/alexandrite_fence_side.json
+6bb9ff8ffb1ab194bd94286819de5cc5cf3029ed assets/mccourse/models/block/alexandrite_lamp_off.json
+bf2a55043b12c364eb74df18f483c355cf8b8274 assets/mccourse/models/block/alexandrite_lamp_on.json
 19a35b68d2764035a9936b860135b99bd4ac1248 assets/mccourse/models/block/alexandrite_ore.json
 abedff00e3abd42a5446ab078c213742a34082df assets/mccourse/models/block/alexandrite_pressure_plate.json
 8340b6541f409d48e1fd88247ad1ae5cd719ac58 assets/mccourse/models/block/alexandrite_pressure_plate_down.json
@@ -53,6 +56,7 @@ fe918efb440e6d7d6ab5af56e750e32a0adb117f assets/mccourse/models/block/end_stone_
 5b8a18781190e3ccb7b4bee37a35aa24a14c47f6 assets/mccourse/models/block/sound_block.json
 5d130cf7e4d52cc6b9e11fb75e7bb78128858d2c assets/mccourse/models/item/alexandrite_block.json
 7ae8a0ea86ecc2d4ed904831b2c0d243eff48f2e assets/mccourse/models/item/alexandrite_fence_gate.json
+c3b5e41818045223f40f65a4395c171f5a4c4141 assets/mccourse/models/item/alexandrite_lamp.json
 5f597a7904f05b8e8388ad7b602fda90f0bc4502 assets/mccourse/models/item/alexandrite_ore.json
 14d04f238c278d9b3a1200e856f729dac5998152 assets/mccourse/models/item/alexandrite_pressure_plate.json
 c0f67843ce871a3016718bc01d517ee2df4e1cfb assets/mccourse/models/item/alexandrite_slab.json
