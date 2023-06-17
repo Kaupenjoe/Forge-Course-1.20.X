@@ -3,12 +3,17 @@ package net.kaupenjoe.mccourse.event;
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.command.ReturnHomeCommand;
 import net.kaupenjoe.mccourse.command.SetHomeCommand;
+import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.item.custom.HammerItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.entity.animal.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +23,7 @@ import net.minecraftforge.server.command.ConfigCommand;
 import java.util.HashSet;
 import java.util.Set;
 
-@Mod.EventBusSubscriber(modid = MCCourseMod.MOD_ID)
+@Mod.EventBusSubscriber(modid = MCCourseMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
 
     // Done with the help of https://github.com/CoFH/CoFHCore/blob/1.19.x/src/main/java/cofh/core/event/AreaEffectEvents.java
@@ -60,5 +65,20 @@ public class ModEvents {
     public static void onPlayerCloned(PlayerEvent.Clone event) {
         event.getEntity().getPersistentData().putIntArray("mccourse.homepos",
                 event.getOriginal().getPersistentData().getIntArray("mccourse.homepos"));
+    }
+
+    @SubscribeEvent
+    public static void livingDamage(LivingDamageEvent event) {
+        if(event.getEntity() instanceof Sheep) {
+            if(event.getSource().getDirectEntity() instanceof Player player) {
+                if(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() == ModItems.ALEXANDRITE_AXE.get()) {
+                    MCCourseMod.LOGGER.info("Sheep was hit with Alexandrite Axe by " + player.getName().getString());
+                }else if(player.getItemInHand(InteractionHand.MAIN_HAND).getItem() == Items.DIAMOND) {
+                    MCCourseMod.LOGGER.info("Sheep was hit with DIAMOND by " + player.getName().getString());
+                } else {
+                    MCCourseMod.LOGGER.info("Sheep was hit with something else by " + player.getName().getString());
+                }
+            }
+        }
     }
 }
