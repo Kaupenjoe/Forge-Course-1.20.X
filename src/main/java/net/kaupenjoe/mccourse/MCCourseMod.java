@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse;
 
 import com.mojang.logging.LogUtils;
 import net.kaupenjoe.mccourse.block.ModBlocks;
+import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
 import net.kaupenjoe.mccourse.item.ModCreativeModeTabs;
 import net.kaupenjoe.mccourse.item.ModItemProperties;
@@ -46,6 +47,8 @@ public class MCCourseMod {
 
         ModLootModifiers.register(modEventBus);
         ModPaintings.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
