@@ -34,5 +34,13 @@
     "sounds": [
       "mccourse:alexandrite_lamp_fall"
     ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "mccourse:bar_brawl",
+        "stream": true
+      }
+    ]
   }
 }
