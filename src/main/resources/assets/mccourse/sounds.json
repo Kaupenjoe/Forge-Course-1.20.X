@@ -4,5 +4,35 @@
     "sounds": [
       "mccourse:metal_detector_found_ore"
     ]
+  },
+  "alexandrite_lamp_break": {
+    "subtitle": "mccourse.alexandrite_lamp_break",
+    "sounds": [
+      "mccourse:alexandrite_lamp_break"
+    ]
+  },
+  "alexandrite_lamp_step": {
+    "subtitle": "mccourse.alexandrite_lamp_step",
+    "sounds": [
+      "mccourse:alexandrite_lamp_step"
+    ]
+  },
+  "alexandrite_lamp_place": {
+    "subtitle": "mccourse.alexandrite_lamp_place",
+    "sounds": [
+      "mccourse:alexandrite_lamp_place"
+    ]
+  },
+  "alexandrite_lamp_hit": {
+    "subtitle": "mccourse.alexandrite_lamp_hit",
+    "sounds": [
+      "mccourse:alexandrite_lamp_hit"
+    ]
+  },
+  "alexandrite_lamp_fall": {
+    "subtitle": "mccourse.alexandrite_lamp_fall",
+    "sounds": [
+      "mccourse:alexandrite_lamp_fall"
+    ]
   }
 }
