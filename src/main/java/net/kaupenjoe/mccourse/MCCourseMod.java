@@ -12,6 +12,7 @@ import net.kaupenjoe.mccourse.painting.ModPaintings;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
 import net.kaupenjoe.mccourse.potion.ModPotions;
 import net.kaupenjoe.mccourse.sound.ModSounds;
+import net.kaupenjoe.mccourse.villager.ModVillagers;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -54,6 +55,8 @@ public class MCCourseMod {
 
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

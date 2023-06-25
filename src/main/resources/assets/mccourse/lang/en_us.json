@@ -75,5 +75,7 @@
 
   "tooltip.mccourse.metal_detector.tooltip.shift": "Right Click on Blocks to find Valuables!",
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
-  "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking."
+  "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking.",
+
+  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster"
 }
