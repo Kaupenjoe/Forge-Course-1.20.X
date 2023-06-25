@@ -1,0 +1,14 @@
+{
+  "type": "mccourse:add_item",
+  "conditions": [
+    {
+      "block": "minecraft:fern",
+      "condition": "minecraft:block_state_property"
+    },
+    {
+      "chance": 0.35,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "mccourse:kohlrabi_seeds"
+}
