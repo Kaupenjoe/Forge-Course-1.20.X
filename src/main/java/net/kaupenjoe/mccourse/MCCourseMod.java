@@ -7,6 +7,7 @@ import net.kaupenjoe.mccourse.item.ModCreativeModeTabs;
 import net.kaupenjoe.mccourse.item.ModItemProperties;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.loot.ModLootModifiers;
+import net.kaupenjoe.mccourse.painting.ModPaintings;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -44,6 +45,7 @@ public class MCCourseMod {
         ModSounds.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

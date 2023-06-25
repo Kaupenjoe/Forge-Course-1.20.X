@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "mccourse:saw_them",
+      "required": false
+    },
+    {
+      "id": "mccourse:shrimp",
+      "required": false
+    },
+    {
+      "id": "mccourse:world",
+      "required": false
+    }
+  ]
+}
