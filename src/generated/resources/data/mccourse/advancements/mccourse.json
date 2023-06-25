@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_alexandrite": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mccourse:alexandrite"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "mccourse:textures/block/alexandrite_ore.png",
+    "description": {
+      "text": "The Power lies in the Alexandrite!"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "mccourse:alexandrite"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "MC Course"
+    }
+  },
+  "requirements": [
+    [
+      "has_alexandrite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
