@@ -64,6 +64,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.ALEXANDRITE_LAMP.get());
                         output.accept(ModBlocks.SNAPDRAGON.get());
+                        output.accept(ModBlocks.GEM_EMPOWERING_STATION.get());
                     }).build());
 
 
