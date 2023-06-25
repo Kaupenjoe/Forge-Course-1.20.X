@@ -5,6 +5,7 @@ import net.kaupenjoe.mccourse.block.custom.AlexandriteLampBlock;
 import net.kaupenjoe.mccourse.block.custom.GemEmpoweringStationBlock;
 import net.kaupenjoe.mccourse.block.custom.KohlrabiCropBlock;
 import net.kaupenjoe.mccourse.block.custom.SoundBlock;
+import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModItems;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.minecraft.sounds.SoundEvents;
@@ -91,6 +92,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEM_EMPOWERING_STATION = registerBlock("gem_empowering_station",
             () -> new GemEmpoweringStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<LiquidBlock> SOAP_WATER_BLOCK = BLOCKS.register("soap_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_SOAP_WATER, BlockBehaviour.Properties.copy(Blocks.WATER).noLootTable()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
