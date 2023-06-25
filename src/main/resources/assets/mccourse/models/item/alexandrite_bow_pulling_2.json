@@ -1,0 +1,6 @@
+{
+    "parent": "mccourse:item/alexandrite_bow",
+    "textures": {
+        "layer0": "mccourse:item/alexandrite_bow_pulling_2"
+    }
+}
