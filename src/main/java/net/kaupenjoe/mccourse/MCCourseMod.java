@@ -15,6 +15,7 @@ import net.kaupenjoe.mccourse.painting.ModPaintings;
 import net.kaupenjoe.mccourse.particle.ModParticles;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
 import net.kaupenjoe.mccourse.potion.ModPotions;
+import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.GemEmpoweringStationScreen;
 import net.kaupenjoe.mccourse.screen.ModMenuTypes;
 import net.kaupenjoe.mccourse.sound.ModSounds;
@@ -73,6 +74,8 @@ public class MCCourseMod {
 
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
