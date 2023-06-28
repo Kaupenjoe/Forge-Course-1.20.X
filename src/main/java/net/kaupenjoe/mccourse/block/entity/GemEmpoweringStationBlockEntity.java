@@ -129,6 +129,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     @Override
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
+        pTag.putInt("gem_empowering_station.progress", progress);
 
         super.saveAdditional(pTag);
     }
@@ -137,6 +138,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     public void load(CompoundTag pTag) {
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
+        progress = pTag.getInt("gem_empowering_station.progress");
 
     }
 
