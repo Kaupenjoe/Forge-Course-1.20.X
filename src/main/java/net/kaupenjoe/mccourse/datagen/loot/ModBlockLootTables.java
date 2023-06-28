@@ -72,6 +72,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.WALNUT_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.WALNUT_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        this.add(ModBlocks.WALNUT_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WALNUT_SIGN.get()));
+        this.add(ModBlocks.WALNUT_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WALNUT_SIGN.get()));
+        this.add(ModBlocks.WALNUT_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WALNUT_HANGING_SIGN.get()));
+        this.add(ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WALNUT_HANGING_SIGN.get()));
+
     }
 
     @Override

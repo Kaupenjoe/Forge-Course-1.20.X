@@ -19,10 +19,12 @@ import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.GemEmpoweringStationScreen;
 import net.kaupenjoe.mccourse.screen.ModMenuTypes;
 import net.kaupenjoe.mccourse.sound.ModSounds;
+import net.kaupenjoe.mccourse.util.ModWoodTypes;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -119,6 +121,8 @@ public class MCCourseMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                Sheets.addWoodType(ModWoodTypes.WALNUT);
+
                 ModItemProperties.addCustomItemProperties();
 
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_SOAP_WATER.get(), RenderType.translucent());

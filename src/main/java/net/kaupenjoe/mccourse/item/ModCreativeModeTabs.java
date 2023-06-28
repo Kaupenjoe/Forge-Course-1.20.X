@@ -47,6 +47,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_SHIELD.get());
                         output.accept(ModItems.SOAP_WATER_BUCKET.get());
 
+                        output.accept(ModItems.WALNUT_SIGN.get());
+                        output.accept(ModItems.WALNUT_HANGING_SIGN.get());
+
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());

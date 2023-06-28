@@ -76,6 +76,13 @@ public class ModItems {
     public static final RegistryObject<Item> SOAP_WATER_BUCKET = ITEMS.register("soap_water_bucket",
             () -> new BucketItem(ModFluids.SOURCE_SOAP_WATER, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1)));
 
+
+    public static final RegistryObject<Item> WALNUT_SIGN = ITEMS.register("walnut_sign",
+            () -> new SignItem(new Item.Properties().stacksTo(16), ModBlocks.WALNUT_SIGN.get(), ModBlocks.WALNUT_WALL_SIGN.get()));
+    public static final RegistryObject<Item> WALNUT_HANGING_SIGN = ITEMS.register("walnut_hanging_sign",
+            () -> new HangingSignItem(ModBlocks.WALNUT_HANGING_SIGN.get(), ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), 
+                    new Item.Properties().stacksTo(16)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
