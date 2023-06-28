@@ -80,5 +80,8 @@
   "tooltip.mccourse.metal_detector.tooltip": "Press §eSHIFT§r for more Information",
   "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking.",
 
-  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster"
+  "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster",
+
+  "mccourse.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "mccourse.tooltip.liquid.amount": "%s mB"
 }
