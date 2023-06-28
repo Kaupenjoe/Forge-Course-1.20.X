@@ -1,4 +1,4 @@
-// 1.20.1	2023-06-25T12:10:35.3959409	Loot Tables
+// 1.20.1	2023-06-28T18:16:11.0314084	Loot Tables
 3c04bafc8e377b8b3a0acec4fb355ebe506bd32a data/mccourse/loot_tables/blocks/alexandrite_block.json
 5ee80a3f0dae7a738f12360934f26b319920a8a3 data/mccourse/loot_tables/blocks/alexandrite_button.json
 3cf926928d6232271016b028304beb66caa9effe data/mccourse/loot_tables/blocks/alexandrite_door.json
@@ -20,3 +20,10 @@ f1e02b0627adf1ecddd380ae8e3ff41d994246d4 data/mccourse/loot_tables/blocks/kohlra
 7b06f064286af9b42cc2af9b330255bdfc434d90 data/mccourse/loot_tables/blocks/raw_alexandrite_block.json
 362603660cff043f880c5a913620299474b76bfd data/mccourse/loot_tables/blocks/snapdragon.json
 7d8fa6812bfae52dfc6b76bdf45977c92f8766af data/mccourse/loot_tables/blocks/sound_block.json
+9efd266dcf7ebe2be44cf052500cd060269cef2a data/mccourse/loot_tables/blocks/stripped_walnut_log.json
+8f0635128b58389e52439fe8edc7dc21b14930d9 data/mccourse/loot_tables/blocks/stripped_walnut_wood.json
+4482990eb25903335217824cf8b0490b8be579df data/mccourse/loot_tables/blocks/walnut_leaves.json
+a260d3a8a47c849f48375dc042cc412fd426eca3 data/mccourse/loot_tables/blocks/walnut_log.json
+b5f2b604d9e5fb135c1a3be9dbd49b2f629cbbdf data/mccourse/loot_tables/blocks/walnut_planks.json
+41ac472dee3918d8961c589f245db268b2b2a1b3 data/mccourse/loot_tables/blocks/walnut_sapling.json
+d82440fe3e083e17913e11c547a1af4610bf56b5 data/mccourse/loot_tables/blocks/walnut_wood.json

@@ -61,6 +61,15 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_WALL.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.ALEXANDRITE_FENCE_GATE.get());
+
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(ModBlocks.WALNUT_LOG.get())
+                .add(ModBlocks.WALNUT_WOOD.get())
+                .add(ModBlocks.STRIPPED_WALNUT_LOG.get())
+                .add(ModBlocks.STRIPPED_WALNUT_WOOD.get());
+
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.WALNUT_PLANKS.get());
     }
 
     @Override

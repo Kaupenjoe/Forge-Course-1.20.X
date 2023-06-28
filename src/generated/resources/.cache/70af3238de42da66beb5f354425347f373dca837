@@ -1,10 +1,12 @@
-// 1.20.1	2023-06-13T09:08:21.3404445	Block Tags
+// 1.20.1	2023-06-28T18:16:11.0304091	Block Tags
 5f226d87fb0a63437b0af494c4870fc24b7dfd82 data/mccourse/tags/blocks/metal_detector_valuables.json
 64ba52a0503fe733de3f3907b7f157cb0821a8e3 data/mccourse/tags/blocks/mineable/paxel.json
 08e816d84dd5a9806309e91f51915a5605841bb8 data/mccourse/tags/blocks/needs_alexandrite_tool.json
 43b621c9e36eb4c7ee0e97ecc2dd841d090c7821 data/minecraft/tags/blocks/fences.json
 c019d56ddaf7b3dec0cca0ef234845dd8a1007a7 data/minecraft/tags/blocks/fence_gates.json
+46587698990f13785898e9fb4b62d6ba4212f45a data/minecraft/tags/blocks/logs_that_burn.json
 86725108ade1a6bbc97767feb37c95e398f05914 data/minecraft/tags/blocks/mineable/pickaxe.json
 bd35710c7801d251dd374e23bfb2d9e897d62f53 data/minecraft/tags/blocks/needs_diamond_tool.json
 905f9fb989b2a02b8a9d68a380a4fd916a0c2d83 data/minecraft/tags/blocks/needs_iron_tool.json
+e0ccd7e2e05f902bcc455bba38a3fcd126e23cce data/minecraft/tags/blocks/planks.json
 fcae742425a5d2edad1054f123baad77857ee1b5 data/minecraft/tags/blocks/walls.json

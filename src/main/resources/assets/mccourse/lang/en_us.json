@@ -57,6 +57,15 @@
 
   "block.mccourse.gem_empowering_station": "Gem Empowering Station",
 
+  "block.mccourse.walnut_log": "Walnut Log",
+  "block.mccourse.walnut_planks": "Walnut Planks",
+  "block.mccourse.walnut_wood": "Walnut Wood",
+  "block.mccourse.stripped_walnut_log": "Stripped Walnut Log",
+  "block.mccourse.stripped_walnut_wood": "Stripped Walnut Wood",
+  "block.mccourse.walnut_leaves": "Walnut Leaves",
+
+  "block.mccourse.walnut_sapling": "Walnut Sapling",
+
   "block.mccourse.sound_block": "Sound Block",
 
   "creativetab.course_tab": "Course Tab",
