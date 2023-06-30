@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.WALNUT_SIGN.get());
                         output.accept(ModItems.WALNUT_HANGING_SIGN.get());
+                        output.accept(ModItems.RHINO_SPAWN_EGG.get());
 
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());

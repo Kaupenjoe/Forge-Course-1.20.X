@@ -5,6 +5,8 @@ import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.effect.ModEffects;
 import net.kaupenjoe.mccourse.enchantment.ModEnchantments;
+import net.kaupenjoe.mccourse.entity.ModEntities;
+import net.kaupenjoe.mccourse.entity.client.RhinoRenderer;
 import net.kaupenjoe.mccourse.fluid.ModFluidTypes;
 import net.kaupenjoe.mccourse.fluid.ModFluids;
 import net.kaupenjoe.mccourse.item.ModCreativeModeTabs;
@@ -25,6 +27,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
@@ -78,6 +81,7 @@ public class MCCourseMod {
         ModMenuTypes.register(modEventBus);
 
         ModRecipes.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -129,6 +133,8 @@ public class MCCourseMod {
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
 
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
+
+                EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
             });
         }
     }
