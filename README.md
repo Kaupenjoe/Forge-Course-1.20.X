@@ -11,12 +11,3 @@ It covers a variety of Topics, from Custom Tools, to Custom Armor, all the way t
 The Source Code will always be freely available under the MIT-License, but to support me you can buy the Course which gets you almost 12 Hours of Video Lectures with more to come!
 
 Take a look at the Course right here: <a href="https://courses.kaupenjoe.net/p/modding-by-kaupenjoe-forge-modding-for-minecraft-1-20-x" target="_blank">COURSE</a>
-
-<h3 align="center">
-Are you stuck? Need some more help? join Kaupenjoe's Discord server today!
-</h3>
-<a href="https://url.kaupenjoe.net/discord">
-    <p align="center">
-        <img src="https://i.imgur.com/F2vRgE1.png" alt="Logo" width="150"/> 
-    </p>
-</a>
