@@ -1,3 +1,6 @@
 onHammerUsage Method contains parts of:
 https://github.com/CoFH/CoFHCore/blob/1.19.x/src/main/java/cofh/core/event/AreaEffectEvents.java
 Distributed under "CoFH "Don't Be a Jerk" License v2" (https://github.com/CoFH/CoFHCore/tree/1.19.x#readme)
+
+WrappedHandler by noeppi_noeppi
+under Apache License 2.0: https://github.com/ModdingX/LibX/blob/1.19/LICENSE
