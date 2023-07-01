@@ -1,3 +1,15 @@
 onHammerUsage Method contains parts of:
 https://github.com/CoFH/CoFHCore/blob/1.19.x/src/main/java/cofh/core/event/AreaEffectEvents.java
 Distributed under "CoFH "Don't Be a Jerk" License v2" (https://github.com/CoFH/CoFHCore/tree/1.19.x#readme)
+
+WrappedHandler by noeppi_noeppi
+under Apache License 2.0: https://github.com/ModdingX/LibX/blob/1.19/LICENSE
+
+EnergyDisplayTooltipArea by BluSunrize from ImmersiveEngineering
+https://github.com/BluSunrize/ImmersiveEngineering/blob/1.19.2/src/main/java/blusunrize/immersiveengineering/client/gui/info/EnergyInfoArea.java
+Distributed under Blu's License of Common Sense: https://github.com/BluSunrize/ImmersiveEngineering/blob/1.19.2/LICENSE
+
+FluidTankRenderer by mezz from https://github.com/mezz/JustEnoughItems
+Distributed under MIT-License: https://github.com/mezz/JustEnoughItems/blob/1.19/LICENSE.txt
+Includes major rewrites and methods from:
+https://github.com/mezz/JustEnoughItems/blob/1.19/Forge/src/main/java/mezz/jei/forge/platform/FluidHelper.java
