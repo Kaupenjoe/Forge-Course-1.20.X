@@ -1,4 +1,4 @@
-<a href="https://courses.kaupenjoe.net/p/modding-by-kaupenjoe-forge-modding-for-minecraft-1-20-x">
+<a href="https://courses.kaupenjoe.net/p/modding-by-kaupenjoe-forge-modding-for-minecraft-1-20-x" target="_blank">
 <p align="center">
 <img src="https://kaupenjoe.net/files/General/Minecraft/Modding/Course/forge-120x-course-image.jpg" alt="Logo" width="1000"/> 
 </p></a>
@@ -10,7 +10,7 @@ It covers a variety of Topics, from Custom Tools, to Custom Armor, all the way t
 
 The Source Code will always be freely available under the MIT-License, but to support me you can buy the Course which gets you almost 12 Hours of Video Lectures with more to come!
 
-Take a look at the Course right here: <a href="https://courses.kaupenjoe.net/p/modding-by-kaupenjoe-forge-modding-for-minecraft-1-20-x">COURSE</a>
+Take a look at the Course right here: <a href="https://courses.kaupenjoe.net/p/modding-by-kaupenjoe-forge-modding-for-minecraft-1-20-x" target="_blank">COURSE</a>
 
 <h3 align="center">
 Are you stuck? Need some more help? join Kaupenjoe's Discord server today!
