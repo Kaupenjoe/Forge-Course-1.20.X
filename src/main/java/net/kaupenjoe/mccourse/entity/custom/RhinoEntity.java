@@ -12,6 +12,8 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.DifficultyInstance;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -20,11 +22,15 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.Nullable;
 
-public class RhinoEntity extends Animal {
+public class RhinoEntity extends TamableAnimal {
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(RhinoEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -37,7 +43,9 @@ public class RhinoEntity extends Animal {
     public final AnimationState attackAnimationState = new AnimationState();
     public int attackAnimationTimeout = 0;
 
-    public RhinoEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    public final AnimationState sitAnimationState = new AnimationState();
+
+    public RhinoEntity(EntityType<? extends TamableAnimal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
@@ -46,6 +54,9 @@ public class RhinoEntity extends Animal {
         this.goalSelector.addGoal(0, new FloatGoal(this));
 
         this.goalSelector.addGoal(1, new RhinoAttackGoal(this, 1.0D, true));
+
+        this.goalSelector.addGoal(1, new SitWhenOrderedToGoal(this));
+        this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1.25d, 18f, 7f, false));
 
         this.goalSelector.addGoal(1, new FollowParentGoal(this, 1.1d));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
@@ -88,6 +99,12 @@ public class RhinoEntity extends Animal {
 
         if(!this.isAttacking()) {
             attackAnimationState.stop();
+        }
+
+        if(this.isInSittingPose()) {
+            sitAnimationState.startIfStopped(this.tickCount);
+        } else {
+            sitAnimationState.stop();
         }
     }
 
@@ -178,5 +195,45 @@ public class RhinoEntity extends Animal {
     @Override
     protected SoundEvent getDeathSound() {
         return SoundEvents.DOLPHIN_DEATH;
+    }
+
+    /* TAMEABLE */
+
+    @Override
+    public InteractionResult mobInteract(Player pPlayer, InteractionHand pHand) {
+        ItemStack itemstack = pPlayer.getItemInHand(pHand);
+        Item item = itemstack.getItem();
+
+        Item itemForTaming = Items.APPLE;
+
+        if(item == itemForTaming && !isTame()) {
+            if(this.level().isClientSide()) {
+                return InteractionResult.CONSUME;
+            } else {
+                if (!pPlayer.getAbilities().instabuild) {
+                    itemstack.shrink(1);
+                }
+
+                if (!ForgeEventFactory.onAnimalTame(this, pPlayer)) {
+                    super.tame(pPlayer);
+                    this.navigation.recomputePath();
+                    this.setTarget(null);
+                    this.level().broadcastEntityEvent(this, (byte)7);
+                    setOrderedToSit(true);
+                    this.setInSittingPose(true);
+                }
+
+                return InteractionResult.SUCCESS;
+            }
+        }
+
+        // TOGGLES SITTING FOR OUR ENTITY
+        if(isTame() && pHand == InteractionHand.MAIN_HAND) {
+            setOrderedToSit(!isOrderedToSit());
+            setInSittingPose(!isOrderedToSit());
+            return InteractionResult.SUCCESS;
+        }
+
+        return super.mobInteract(pPlayer, pHand);
     }
 }
