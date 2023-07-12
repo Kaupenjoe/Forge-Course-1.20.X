@@ -4,6 +4,9 @@ import net.kaupenjoe.mccourse.entity.ModEntities;
 import net.kaupenjoe.mccourse.entity.ai.RhinoAttackGoal;
 import net.kaupenjoe.mccourse.entity.variant.RhinoVariant;
 import net.minecraft.Util;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -22,15 +25,18 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.Nullable;
 
-public class RhinoEntity extends TamableAnimal {
+public class RhinoEntity extends TamableAnimal implements PlayerRideable {
     private static final EntityDataAccessor<Boolean> ATTACKING =
             SynchedEntityData.defineId(RhinoEntity.class, EntityDataSerializers.BOOLEAN);
 
@@ -47,6 +53,7 @@ public class RhinoEntity extends TamableAnimal {
 
     public RhinoEntity(EntityType<? extends TamableAnimal> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        this.setMaxUpStep(1f);
     }
 
     @Override
@@ -227,13 +234,90 @@ public class RhinoEntity extends TamableAnimal {
             }
         }
 
-        // TOGGLES SITTING FOR OUR ENTITY
         if(isTame() && pHand == InteractionHand.MAIN_HAND) {
-            setOrderedToSit(!isOrderedToSit());
-            setInSittingPose(!isOrderedToSit());
+            if(!pPlayer.isCrouching()) {
+                setRiding(pPlayer);
+            } else {
+                // TOGGLES SITTING FOR OUR ENTITY
+                setOrderedToSit(!isOrderedToSit());
+                setInSittingPose(!isOrderedToSit());
+            }
             return InteractionResult.SUCCESS;
         }
 
         return super.mobInteract(pPlayer, pHand);
     }
+    
+    /* RIDEABLE */
+
+    private void setRiding(Player pPlayer) {
+        this.setInSittingPose(false);
+
+        pPlayer.setYRot(this.getYRot());
+        pPlayer.setXRot(this.getXRot());
+        pPlayer.startRiding(this);
+    }
+
+    @Nullable
+    @Override
+    public LivingEntity getControllingPassenger() {
+        return ((LivingEntity) this.getFirstPassenger());
+    }
+
+    @Override
+    public void travel(Vec3 pTravelVector) {
+        if(this.isVehicle() && getControllingPassenger() instanceof Player) {
+            LivingEntity livingentity = this.getControllingPassenger();
+            this.setYRot(livingentity.getYRot());
+            this.yRotO = this.getYRot();
+            this.setXRot(livingentity.getXRot() * 0.5F);
+            this.setRot(this.getYRot(), this.getXRot());
+            this.yBodyRot = this.getYRot();
+            this.yHeadRot = this.yBodyRot;
+            float f = livingentity.xxa * 0.5F;
+            float f1 = livingentity.zza;
+
+            // Inside this if statement, we are on the client!
+            if (this.isControlledByLocalInstance()) {
+                float newSpeed = (float) this.getAttributeValue(Attributes.MOVEMENT_SPEED);
+                // increasing speed by 100% if the spring key is held down (number for testing purposes)
+                if(Minecraft.getInstance().options.keySprint.isDown()) {
+                    newSpeed *= 2f;
+                }
+
+                this.setSpeed(newSpeed);
+                super.travel(new Vec3(f, pTravelVector.y, f1));
+            }
+        } else {
+            super.travel(pTravelVector);
+        }
+    }
+
+    @Override
+    public Vec3 getDismountLocationForPassenger(LivingEntity pLivingEntity) {
+        Direction direction = this.getMotionDirection();
+        if (direction.getAxis() != Direction.Axis.Y) {
+            int[][] offsets = DismountHelper.offsetsForDirection(direction);
+            BlockPos blockpos = this.blockPosition();
+            BlockPos.MutableBlockPos blockpos$mutableblockpos = new BlockPos.MutableBlockPos();
+
+            for (Pose pose : pLivingEntity.getDismountPoses()) {
+                AABB aabb = pLivingEntity.getLocalBoundsForPose(pose);
+
+                for (int[] offset : offsets) {
+                    blockpos$mutableblockpos.set(blockpos.getX() + offset[0], blockpos.getY(), blockpos.getZ() + offset[1]);
+                    double d0 = this.level().getBlockFloorHeight(blockpos$mutableblockpos);
+                    if (DismountHelper.isBlockFloorValid(d0)) {
+                        Vec3 vec3 = Vec3.upFromBottomCenterOf(blockpos$mutableblockpos, d0);
+                        if (DismountHelper.canDismountTo(this.level(), pLivingEntity, aabb.move(vec3))) {
+                            pLivingEntity.setPose(pose);
+                            return vec3;
+                        }
+                    }
+                }
+            }
+        }
+
+        return super.getDismountLocationForPassenger(pLivingEntity);
+    }    
 }
