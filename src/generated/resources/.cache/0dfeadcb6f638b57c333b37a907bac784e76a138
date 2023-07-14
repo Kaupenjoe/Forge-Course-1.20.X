@@ -1,4 +1,4 @@
-// 1.20.1	2023-06-30T17:13:02.3293225	Item Models: mccourse
+// 1.20.1	2023-07-14T11:52:57.1469656	Item Models: mccourse
 71badbc60185c294e740a7e69a688a1a52a23e11 assets/mccourse/models/item/alexandrite.json
 2708264e5c6062ce8fed21db45430ddac33ffa5c assets/mccourse/models/item/alexandrite_axe.json
 cfc705788577468640df77a99d391497448608d0 assets/mccourse/models/item/alexandrite_button.json
@@ -13,6 +13,7 @@ d7e3fd08979fe3c1c55c99799913461186f0b41b assets/mccourse/models/item/alexandrite
 cc4ab4468ea9d286c8feaf44809a99228b853eb5 assets/mccourse/models/item/alexandrite_sword.json
 38463792de822a6f202140dd5282e260ad9f6ac4 assets/mccourse/models/item/alexandrite_wall.json
 7951dd7897b7d2d6cf1045960ec61e2f02288679 assets/mccourse/models/item/bar_brawl_record.json
+eae9ea63d29bcb3e6592ee8132690be675ea7f9f assets/mccourse/models/item/dice.json
 2ab7eb05354c980c05330598767e6fb49d05ecbf assets/mccourse/models/item/gem_empowering_station.json
 6349d1adee80001ce5a46b787665a782e5c25798 assets/mccourse/models/item/kohlrabi.json
 39b609a6c230f85321604bec3c0fbf1976247e24 assets/mccourse/models/item/kohlrabi_seeds.json
