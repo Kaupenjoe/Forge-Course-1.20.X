@@ -25,6 +25,7 @@ import net.kaupenjoe.mccourse.screen.ModMenuTypes;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.ModWoodTypes;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
+import net.kaupenjoe.mccourse.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.mccourse.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -88,6 +89,7 @@ public class MCCourseMod {
         ModEntities.register(modEventBus);
 
         ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacerTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
