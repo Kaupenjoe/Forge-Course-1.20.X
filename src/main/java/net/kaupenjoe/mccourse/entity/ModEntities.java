@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.entity;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.entity.custom.DiceProjectileEntity;
+import net.kaupenjoe.mccourse.entity.custom.MagicProjectileEntity;
 import net.kaupenjoe.mccourse.entity.custom.RhinoEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -26,6 +27,14 @@ public class ModEntities {
                             .updateInterval(20)
                             .setCustomClientFactory((spawnEntity, level) -> new DiceProjectileEntity(level))
                             .build("dice_projectile"));
+
+    public static final RegistryObject<EntityType<MagicProjectileEntity>> MAGIC_PROJECTILE =
+            ENTITY_TYPES.register("magic_projectile",
+                    () -> EntityType.Builder.<MagicProjectileEntity>of(MagicProjectileEntity::new, MobCategory.MISC)
+                            .sized(0.5f, 0.5f)
+                            .clientTrackingRange(4)
+                            .updateInterval(20)
+                            .build("magic_projectile"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

@@ -2,6 +2,7 @@ package net.kaupenjoe.mccourse.event;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
 import net.kaupenjoe.mccourse.entity.ModEntities;
+import net.kaupenjoe.mccourse.entity.client.MagicProjectileModel;
 import net.kaupenjoe.mccourse.entity.client.RhinoModel;
 import net.kaupenjoe.mccourse.entity.custom.RhinoEntity;
 import net.kaupenjoe.mccourse.entity.layers.ModModelLayers;
@@ -19,6 +20,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayers.RHINO_LAYER, RhinoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.MAGIC_PROJECTILE_LAYER, MagicProjectileModel::createBodyLayer);
     }
 
     @SubscribeEvent
