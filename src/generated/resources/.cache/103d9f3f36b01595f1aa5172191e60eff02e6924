@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-12T15:04:09.9367456	Registries
+// 1.20.1	2023-07-14T14:58:04.7152302	Registries
 d605af91c0502998b329b14d704daa43e8b1adc0 data/mccourse/forge/biome_modifier/add_alexandrite_ore.json
 7a6d7ae17d97f0b74a9bd2cace10a633aef60dc3 data/mccourse/forge/biome_modifier/add_end_alexandrite_ore.json
 a4a2b6f7912693f4a1d5fb555eb671c63fc2b70b data/mccourse/forge/biome_modifier/add_nether_alexandrite_ore.json
@@ -9,7 +9,7 @@ a4a2b6f7912693f4a1d5fb555eb671c63fc2b70b data/mccourse/forge/biome_modifier/add_
 d495dc92c155c72501e66a8794d1fc491c4e8d02 data/mccourse/worldgen/configured_feature/end_alexandrite_ore.json
 189521c97015818ec64f28427daa03d9db8be370 data/mccourse/worldgen/configured_feature/nether_alexandrite_ore.json
 9a1d32b224037b317031e1c4234618a544b9fdf3 data/mccourse/worldgen/configured_feature/snapdragon.json
-344dec4b629ed638530904813150c2fcc6e796b6 data/mccourse/worldgen/configured_feature/walnut.json
+1ead55be418156dc87e825490fe35c468266e96b data/mccourse/worldgen/configured_feature/walnut.json
 db5a15ea18e8de155685dc7603e8a0c3c813cfcf data/mccourse/worldgen/placed_feature/alexandrite_ore_placed.json
 f670757d6d7fcb60ef25daa071add48f74ac1717 data/mccourse/worldgen/placed_feature/end_alexandrite_ore_placed.json
 ff3f516a2cc3d7140e61672ed2c8e23aecf069f6 data/mccourse/worldgen/placed_feature/nether_alexandrite_ore_placed.json
