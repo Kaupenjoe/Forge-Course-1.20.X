@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-14T11:52:57.1469656	Item Models: mccourse
+// 1.20.1	2023-07-14T14:06:55.5617318	Item Models: mccourse
 71badbc60185c294e740a7e69a688a1a52a23e11 assets/mccourse/models/item/alexandrite.json
 2708264e5c6062ce8fed21db45430ddac33ffa5c assets/mccourse/models/item/alexandrite_axe.json
 cfc705788577468640df77a99d391497448608d0 assets/mccourse/models/item/alexandrite_button.json
@@ -23,6 +23,8 @@ d890745bc92e5639d4db062935218a0ef60c01fa assets/mccourse/models/item/raw_alexand
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/mccourse/models/item/rhino_spawn_egg.json
 0981f1d23408e1a7285dc9417be5d8c98dedf614 assets/mccourse/models/item/snapdragon.json
 9162be05041084f0ff9d57b044480250101a8449 assets/mccourse/models/item/soap_water_bucket.json
+af50337a6cb7109bcdc346b62b5f5d2bf677155c assets/mccourse/models/item/walnut_boat.json
+f94888843406d428c917702cf4e79920f451fd83 assets/mccourse/models/item/walnut_chest_boat.json
 78cbe0f31d389163f8cfd2138aa1822cc534e8f5 assets/mccourse/models/item/walnut_hanging_sign.json
 e474396a966e83c65ee72d9f7123116c52e7cb6e assets/mccourse/models/item/walnut_sapling.json
 3edd2411634d5876e38ac5f8c8d736420603b1ed assets/mccourse/models/item/walnut_sign.json

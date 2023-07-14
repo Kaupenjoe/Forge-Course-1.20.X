@@ -63,6 +63,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.RHINO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         simpleItem(ModItems.DICE);
+        simpleItem(ModItems.WALNUT_BOAT);
+        simpleItem(ModItems.WALNUT_CHEST_BOAT);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

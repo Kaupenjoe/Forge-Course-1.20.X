@@ -37,6 +37,9 @@
 
   "item.mccourse.dice": "Dice",
 
+  "item.mccourse.walnut_boat": "Walnut Boat",
+  "item.mccourse.walnut_chest_boat": "Walnut Chest Boat",
+
 
   "block.mccourse.alexandrite_block": "Block of Alexandrite",
   "block.mccourse.raw_alexandrite_block": "Block of Raw Alexandrite",
@@ -96,6 +99,8 @@
   "tooltip.mccourse.sound_block": "Plays nice sounds when walking or right-clicking.",
 
   "entity.minecraft.villager.mccourse.soundmaster": "Soundmaster",
+
+  "entity.mccourse.mod_chest_boat": "Chest Boat",
 
   "mccourse.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "mccourse.tooltip.liquid.amount": "%s mB"
