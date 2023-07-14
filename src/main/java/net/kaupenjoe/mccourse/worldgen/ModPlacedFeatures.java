@@ -25,6 +25,8 @@ public class ModPlacedFeatures {
 
     public static final ResourceKey<PlacedFeature> SNAPDRAGON_PLACED_KEY = registerKey("snapdragon_placed");
 
+    public static final ResourceKey<PlacedFeature> ALEXANDRITE_GEODE_PLACED_KEY = registerKey("alexandrite_geode_placed");
+
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -44,6 +46,12 @@ public class ModPlacedFeatures {
 
         register(context, SNAPDRAGON_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.SNAPDRAGON_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
+
+
+        register(context, ALEXANDRITE_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ALEXANDRITE_GEODE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(50), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(6), VerticalAnchor.absolute(50)),
+                        BiomeFilter.biome()));
 
     }
 

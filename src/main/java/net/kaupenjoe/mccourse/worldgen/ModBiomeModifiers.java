@@ -28,6 +28,8 @@ public class ModBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> SPAWN_RHINO = registerKey("spawn_rhino");
 
+    public static final ResourceKey<BiomeModifier> ADD_ALEXANDRITE_GEODE = registerKey("add_alexandrite_geode");
+
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
@@ -60,6 +62,11 @@ public class ModBiomeModifiers {
         context.register(SPAWN_RHINO, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_DRY_OVERWORLD),
                 List.of(new MobSpawnSettings.SpawnerData(ModEntities.RHINO.get(), 20, 1, 3))));
+
+        context.register(ADD_ALEXANDRITE_GEODE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ALEXANDRITE_GEODE_PLACED_KEY)),
+                GenerationStep.Decoration.LOCAL_MODIFICATIONS));
     }
 
 
