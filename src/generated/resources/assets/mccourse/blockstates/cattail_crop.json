@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "mccourse:block/cat_tail_stage0"
+    },
+    "age=1": {
+      "model": "mccourse:block/cat_tail_stage1"
+    },
+    "age=2": {
+      "model": "mccourse:block/cat_tail_stage2"
+    },
+    "age=3": {
+      "model": "mccourse:block/cat_tail_stage3"
+    },
+    "age=4": {
+      "model": "mccourse:block/cat_tail_stage4"
+    },
+    "age=5": {
+      "model": "mccourse:block/cat_tail_stage5"
+    },
+    "age=6": {
+      "model": "mccourse:block/cat_tail_stage6"
+    },
+    "age=7": {
+      "model": "mccourse:block/cat_tail_stage7"
+    },
+    "age=8": {
+      "model": "mccourse:block/cat_tail_stage8"
+    }
+  }
+}

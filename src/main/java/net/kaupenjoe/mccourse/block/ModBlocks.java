@@ -179,6 +179,9 @@ public class ModBlocks {
                 }
             });
 
+    public static final RegistryObject<Block> CATTAIL_CROP = BLOCKS.register("cattail_crop",
+            () -> new CattailCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

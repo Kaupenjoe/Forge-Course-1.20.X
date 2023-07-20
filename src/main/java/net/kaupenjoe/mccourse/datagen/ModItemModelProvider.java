@@ -65,6 +65,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.DICE);
         simpleItem(ModItems.WALNUT_BOAT);
         simpleItem(ModItems.WALNUT_CHEST_BOAT);
+
+        simpleItem(ModItems.CATTAIL);
+        simpleItem(ModItems.CATTAIL_SEEDS);
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

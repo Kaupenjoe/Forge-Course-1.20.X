@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-20T13:34:31.623566	Block States: mccourse
+// 1.20.1	2023-07-20T14:59:47.7032661	Block States: mccourse
 9b0f59e6a967af477e6f41100bfecb754add6ea2 assets/mccourse/blockstates/alexandrite_block.json
 1fd0895b9aa0e87b67d2c4da0f567f8aa895de30 assets/mccourse/blockstates/alexandrite_button.json
 974428f15970c224b76ef992df827ba4718bb490 assets/mccourse/blockstates/alexandrite_door.json
@@ -11,6 +11,7 @@ c0381e27b65f17b222b2cc166b70947eaf892f59 assets/mccourse/blockstates/alexandrite
 b9268d637796a7c48986779b3e85f1fd1f922553 assets/mccourse/blockstates/alexandrite_stairs.json
 e4fc007d0d52690c5058dad0dd038175362c0079 assets/mccourse/blockstates/alexandrite_trapdoor.json
 aa4167edb1a90218a2772cfe5e8529a7b7a67d6d assets/mccourse/blockstates/alexandrite_wall.json
+8fe33b6d4af9444522d67a976b8537f861d3bd3e assets/mccourse/blockstates/cattail_crop.json
 647acdc71f248fabd80972f5e8ec879675a5c424 assets/mccourse/blockstates/colored_leaves.json
 8fcc4611978185a7f05bf9d92311c83a7c2c011f assets/mccourse/blockstates/deepslate_alexandrite_ore.json
 71a95554c814e8d60754725b9f9c9ddd7600b386 assets/mccourse/blockstates/end_stone_alexandrite_ore.json
@@ -64,6 +65,15 @@ abedff00e3abd42a5446ab078c213742a34082df assets/mccourse/models/block/alexandrit
 efd0676ee7481fd2bd5f4c2a93feb58be9317358 assets/mccourse/models/block/alexandrite_wall_post.json
 c0c1c09e81640f3f4b80639ed433da25e1bd2d6a assets/mccourse/models/block/alexandrite_wall_side.json
 6424a4e9343393f300c6046691f8ba6534f83f41 assets/mccourse/models/block/alexandrite_wall_side_tall.json
+8ab9efe7a061b2b44b06907b1c359c00f0f8cc32 assets/mccourse/models/block/cat_tail_stage0.json
+e6597cdb01d1de74714945751bb0fbe3c49cbbce assets/mccourse/models/block/cat_tail_stage1.json
+c0bed08d75c0680861de4f9211d1e1bc1aefb9dd assets/mccourse/models/block/cat_tail_stage2.json
+de6d34f87013d90f344aa41eceb00aeb76980704 assets/mccourse/models/block/cat_tail_stage3.json
+67287b5e103c7376e72b6935ff3e56c1241815f8 assets/mccourse/models/block/cat_tail_stage4.json
+8555a522502d5b79d409896b76f124d34fe27eca assets/mccourse/models/block/cat_tail_stage5.json
+c313e5849261fe65a89e8cf0a7bf30879cd61a8d assets/mccourse/models/block/cat_tail_stage6.json
+382a73ea474aaa6434f1f89eec7bb7c4fc9761e5 assets/mccourse/models/block/cat_tail_stage7.json
+6ca31c70459b2a047862d78b2a5bcad7daa4402c assets/mccourse/models/block/cat_tail_stage8.json
 7535404ed199e6fedc9694ca965197851dbde251 assets/mccourse/models/block/colored_leaves.json
 e49cc1338930db40727591c39966f4819c88a086 assets/mccourse/models/block/deepslate_alexandrite_ore.json
 fe918efb440e6d7d6ab5af56e750e32a0adb117f assets/mccourse/models/block/end_stone_alexandrite_ore.json

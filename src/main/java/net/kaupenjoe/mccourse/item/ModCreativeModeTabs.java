@@ -55,6 +55,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.WALNUT_BOAT.get());
                         output.accept(ModItems.WALNUT_CHEST_BOAT.get());
 
+                        output.accept(ModItems.CATTAIL_SEEDS.get());
+                        output.accept(ModItems.CATTAIL.get());
+
 
                         output.accept(ModBlocks.ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
