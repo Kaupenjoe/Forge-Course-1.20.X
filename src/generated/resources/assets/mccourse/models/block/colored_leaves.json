@@ -2,6 +2,6 @@
   "parent": "minecraft:block/leaves",
   "render_type": "minecraft:cutout",
   "textures": {
-    "all": "mccourse:block/walnut_leaves"
+    "all": "mccourse:block/colored_leaves"
   }
 }

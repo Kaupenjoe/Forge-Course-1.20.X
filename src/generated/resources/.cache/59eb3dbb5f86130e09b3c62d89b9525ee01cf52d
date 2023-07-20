@@ -1,4 +1,4 @@
-// 1.20.1	2023-06-28T18:55:53.0132558	Loot Tables
+// 1.20.1	2023-07-20T13:30:20.3032579	Loot Tables
 3c04bafc8e377b8b3a0acec4fb355ebe506bd32a data/mccourse/loot_tables/blocks/alexandrite_block.json
 5ee80a3f0dae7a738f12360934f26b319920a8a3 data/mccourse/loot_tables/blocks/alexandrite_button.json
 3cf926928d6232271016b028304beb66caa9effe data/mccourse/loot_tables/blocks/alexandrite_door.json
@@ -11,6 +11,7 @@ cc29b2bba8edc06773081536354828bdfaa3167c data/mccourse/loot_tables/blocks/alexan
 70fab8983f4f8d670d47e55156fc769bf1f8a132 data/mccourse/loot_tables/blocks/alexandrite_stairs.json
 8a92c09bfb7cafae48c1d0821f23f8d868dee214 data/mccourse/loot_tables/blocks/alexandrite_trapdoor.json
 5eecd4a5f2feed1ed65dd975a265293443f3169a data/mccourse/loot_tables/blocks/alexandrite_wall.json
+847f01dfdaf854700edfeefcf42e2dc0692ca81d data/mccourse/loot_tables/blocks/colored_leaves.json
 b0965d5fcc738eee398078e790faa2b0f6bff73e data/mccourse/loot_tables/blocks/deepslate_alexandrite_ore.json
 8e9ff1289ff28f5b041d5d2ed6c38384d2bc8386 data/mccourse/loot_tables/blocks/end_stone_alexandrite_ore.json
 e926ccb30e8312d3c5eaa1371adb263501f9548b data/mccourse/loot_tables/blocks/gem_empowering_station.json

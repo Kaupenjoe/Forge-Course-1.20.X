@@ -1,14 +1,21 @@
 package net.kaupenjoe.mccourse.event;
 
 import net.kaupenjoe.mccourse.MCCourseMod;
+import net.kaupenjoe.mccourse.block.ModBlocks;
 import net.kaupenjoe.mccourse.block.entity.ModBlockEntities;
 import net.kaupenjoe.mccourse.block.entity.renderer.GemEmpoweringBlockEntityRenderer;
 import net.kaupenjoe.mccourse.particle.AlexandriteParticles;
 import net.kaupenjoe.mccourse.particle.ModParticles;
+import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.level.FoliageColor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -29,5 +36,17 @@ public class ModEventClientBusEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
 
+    @SubscribeEvent
+    public static void registerColoredBlocks(RegisterColorHandlersEvent.Block event) {
+        event.register((pState, pLevel, pPos, pTintIndex) -> pLevel != null &&
+                pPos != null ? BiomeColors.getAverageFoliageColor(pLevel, pPos) : FoliageColor.getDefaultColor(), ModBlocks.COLORED_LEAVES.get());
+    }
 
+    @SubscribeEvent
+    public static void registerColoredItems(RegisterColorHandlersEvent.Item event) {
+        event.register((pStack, pTintIndex) -> {
+            BlockState state = ((BlockItem)pStack.getItem()).getBlock().defaultBlockState();
+            return event.getBlockColors().getColor(state, null, null, pTintIndex);
+        }, ModBlocks.COLORED_LEAVES.get());
+    }
 }

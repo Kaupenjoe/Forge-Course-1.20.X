@@ -81,6 +81,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.WALNUT_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.WALNUT_HANGING_SIGN.get()));
 
+        this.dropSelf(ModBlocks.COLORED_LEAVES.get());
     }
 
     @Override
