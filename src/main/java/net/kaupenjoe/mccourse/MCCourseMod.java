@@ -25,6 +25,8 @@ import net.kaupenjoe.mccourse.screen.ModMenuTypes;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.ModWoodTypes;
 import net.kaupenjoe.mccourse.villager.ModVillagers;
+import net.kaupenjoe.mccourse.worldgen.biome.ModTerraBlenderAPI;
+import net.kaupenjoe.mccourse.worldgen.biome.surface.ModSurfaceRules;
 import net.kaupenjoe.mccourse.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.mccourse.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -52,6 +54,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCCourseMod.MOD_ID)
@@ -91,6 +94,8 @@ public class MCCourseMod {
         ModTrunkPlacerTypes.register(modEventBus);
         ModFoliagePlacerTypes.register(modEventBus);
 
+        ModTerraBlenderAPI.registerRegions();
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -106,6 +111,7 @@ public class MCCourseMod {
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD, Items.SLIME_BALL, ModPotions.SLIMEY_POTION.get()));
 
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRules.makeRules());
         });
     }
 

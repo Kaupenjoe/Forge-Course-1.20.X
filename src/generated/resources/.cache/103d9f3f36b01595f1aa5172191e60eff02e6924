@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-14T16:34:40.7039633	Registries
+// 1.20.1	2023-07-29T12:30:17.1881266	Registries
 5136caf25339dc6923d72d193c4f2fcf875476a7 data/mccourse/forge/biome_modifier/add_alexandrite_geode.json
 d605af91c0502998b329b14d704daa43e8b1adc0 data/mccourse/forge/biome_modifier/add_alexandrite_ore.json
 7a6d7ae17d97f0b74a9bd2cace10a633aef60dc3 data/mccourse/forge/biome_modifier/add_end_alexandrite_ore.json
@@ -6,6 +6,8 @@ a4a2b6f7912693f4a1d5fb555eb671c63fc2b70b data/mccourse/forge/biome_modifier/add_
 5672729abec0d2f7b9ad142bb5ac6625da735cae data/mccourse/forge/biome_modifier/add_snapdragon.json
 869e69065b7a620d3e209020f8766f08cebbe760 data/mccourse/forge/biome_modifier/add_tree_walnut.json
 9c8b9c47c51361b629955f0999bc27e7e7672730 data/mccourse/forge/biome_modifier/spawn_rhino.json
+7b0e15c4f6a4253f518954bcc42ab0d606a7e9f9 data/mccourse/worldgen/biome/test_biome.json
+7b0e15c4f6a4253f518954bcc42ab0d606a7e9f9 data/mccourse/worldgen/biome/test_biome_2.json
 3a6e2351900a984034e83cd556802aa77a1813a3 data/mccourse/worldgen/configured_feature/alexandrite_geode.json
 0554dd88685b9ca50243f171bd1d8e0dd1d0280f data/mccourse/worldgen/configured_feature/alexandrite_ore.json
 d495dc92c155c72501e66a8794d1fc491c4e8d02 data/mccourse/worldgen/configured_feature/end_alexandrite_ore.json
