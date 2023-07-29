@@ -1,4 +1,6 @@
-// 1.20.1	2023-07-29T12:30:17.1881266	Registries
+// 1.20.1	2023-07-29T12:57:04.1064583	Registries
+ec16b8f0442363bcec63055381d85c079115bbbe data/mccourse/dimension/kaupendim.json
+e241e971aacde6f4d0236c622c99d6c9caeb981e data/mccourse/dimension_type/kaupendim_type.json
 5136caf25339dc6923d72d193c4f2fcf875476a7 data/mccourse/forge/biome_modifier/add_alexandrite_geode.json
 d605af91c0502998b329b14d704daa43e8b1adc0 data/mccourse/forge/biome_modifier/add_alexandrite_ore.json
 7a6d7ae17d97f0b74a9bd2cace10a633aef60dc3 data/mccourse/forge/biome_modifier/add_end_alexandrite_ore.json

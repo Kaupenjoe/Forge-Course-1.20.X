@@ -91,6 +91,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.WALNUT_LEAVES.get());
 
                         output.accept(ModBlocks.COLORED_LEAVES.get());
+                        output.accept(ModBlocks.KAUPEN_PORTAL.get());
                     }).build());
 
 

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mccourse:block/kaupen_portal"
+    }
+  }
+}
