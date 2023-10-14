@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-20T14:59:47.7022657	Loot Tables
+// 1.20.1	2023-10-14T13:44:36.4825768	Loot Tables
 3c04bafc8e377b8b3a0acec4fb355ebe506bd32a data/mccourse/loot_tables/blocks/alexandrite_block.json
 5ee80a3f0dae7a738f12360934f26b319920a8a3 data/mccourse/loot_tables/blocks/alexandrite_button.json
 3cf926928d6232271016b028304beb66caa9effe data/mccourse/loot_tables/blocks/alexandrite_door.json
@@ -20,6 +20,10 @@ f1e02b0627adf1ecddd380ae8e3ff41d994246d4 data/mccourse/loot_tables/blocks/kohlra
 07b730d603378c298d6630dd5c2fd8c3398ecea7 data/mccourse/loot_tables/blocks/nether_alexandrite_ore.json
 07e90e13b0fc8b604f3c36b15eef394ed68108c9 data/mccourse/loot_tables/blocks/potted_snapdragon.json
 7b06f064286af9b42cc2af9b330255bdfc434d90 data/mccourse/loot_tables/blocks/raw_alexandrite_block.json
+a1f9c183d88e7936935541bedf3326b92709809e data/mccourse/loot_tables/blocks/ruby_block.json
+17ba1c49bf627d9e95b9807db731684be18d2d7b data/mccourse/loot_tables/blocks/ruby_block_1.json
+5da96cd17baf05e1555ec3ff065f1c860c8dc63c data/mccourse/loot_tables/blocks/ruby_block_2.json
+dc56f66a8115ff39758f954d495594af9cf2ae68 data/mccourse/loot_tables/blocks/ruby_block_3.json
 362603660cff043f880c5a913620299474b76bfd data/mccourse/loot_tables/blocks/snapdragon.json
 7d8fa6812bfae52dfc6b76bdf45977c92f8766af data/mccourse/loot_tables/blocks/sound_block.json
 9efd266dcf7ebe2be44cf052500cd060269cef2a data/mccourse/loot_tables/blocks/stripped_walnut_log.json
@@ -33,3 +37,7 @@ b5f2b604d9e5fb135c1a3be9dbd49b2f629cbbdf data/mccourse/loot_tables/blocks/walnut
 73225a338023a1564709868b60e339066d5737cd data/mccourse/loot_tables/blocks/walnut_wall_hanging_sign.json
 3ba94b92ab8f7adb0497ecc4f1524d4839ab6844 data/mccourse/loot_tables/blocks/walnut_wall_sign.json
 d82440fe3e083e17913e11c547a1af4610bf56b5 data/mccourse/loot_tables/blocks/walnut_wood.json
+a7b5c76e08b37720700ef1b7a257bcd1bc4ddfb2 data/mccourse/loot_tables/blocks/waxed_ruby_block.json
+83ae94c1b79490413584a5c2ad8cd01b706f2098 data/mccourse/loot_tables/blocks/waxed_ruby_block_1.json
+c74716f4e40d2df93de33c28b3bb01b26659a290 data/mccourse/loot_tables/blocks/waxed_ruby_block_2.json
+47ad9aac2e43dc937520dea017c714deea63e0a8 data/mccourse/loot_tables/blocks/waxed_ruby_block_3.json

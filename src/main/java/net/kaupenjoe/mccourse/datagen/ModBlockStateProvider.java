@@ -91,6 +91,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.COLORED_LEAVES);
 
         makeCattailCrop(((CattailCropBlock) ModBlocks.CATTAIL_CROP.get()), "cat_tail_stage", "cat_tail_stage");
+
+
+        blockWithItem(ModBlocks.RUBY_BLOCK);
+        blockWithItem(ModBlocks.RUBY_BLOCK_1);
+        blockWithItem(ModBlocks.RUBY_BLOCK_2);
+        blockWithItem(ModBlocks.RUBY_BLOCK_3);
+
+        blockWithItem(ModBlocks.WAXED_RUBY_BLOCK);
+        blockWithItem(ModBlocks.WAXED_RUBY_BLOCK_1);
+        blockWithItem(ModBlocks.WAXED_RUBY_BLOCK_2);
+        blockWithItem(ModBlocks.WAXED_RUBY_BLOCK_3);
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

@@ -100,7 +100,7 @@ public class ModItems {
             () -> new ModBoatItem(true, ModBoatEntity.Type.WALNUT, new Item.Properties()));
 
     public static final RegistryObject<Item> CATTAIL = ITEMS.register("cattail",
-            () -> new Item(new Item.Properties()));
+            () -> new ModWaxingItem(new Item.Properties()));
     public static final RegistryObject<Item> CATTAIL_SEEDS = ITEMS.register("cattail_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CATTAIL_CROP.get(), new Item.Properties()));
 

@@ -186,6 +186,29 @@ public class ModBlocks {
             () -> new KaupenPortalBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_PORTAL).noLootTable().noOcclusion().noCollission()));
 
 
+    public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.UNAFFECTED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> RUBY_BLOCK_1 = registerBlock("ruby_block_1",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.EXPOSED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> RUBY_BLOCK_2 = registerBlock("ruby_block_2",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.WEATHERED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> RUBY_BLOCK_3 = registerBlock("ruby_block_3",
+            () -> new DegradableRubyBlock(GemDegradable.GemDegradationLevel.DEGRADED,
+                    BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+    public static final RegistryObject<Block> WAXED_RUBY_BLOCK = registerBlock("waxed_ruby_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> WAXED_RUBY_BLOCK_1 = registerBlock("waxed_ruby_block_1",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> WAXED_RUBY_BLOCK_2 = registerBlock("waxed_ruby_block_2",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> WAXED_RUBY_BLOCK_3 = registerBlock("waxed_ruby_block_3",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
