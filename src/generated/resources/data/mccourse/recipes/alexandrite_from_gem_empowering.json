@@ -1,5 +1,9 @@
 {
   "type": "mccourse:gem_empowering",
+  "craftTime": 160,
+  "energyAmount": 50,
+  "fluidAmount": 2000,
+  "fluidType": "minecraft:water",
   "ingredients": [
     {
       "item": "mccourse:raw_alexandrite"

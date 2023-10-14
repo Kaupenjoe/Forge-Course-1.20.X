@@ -12,16 +12,25 @@ import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.registries.ForgeRegistries;
 
 public class GemEmpoweringRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> inputItems;
     private final ItemStack output;
     private final ResourceLocation id;
+    private final int craftTime;
+    private final int energyAmount;
+    private final FluidStack fluidStack;
 
-    public GemEmpoweringRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems) {
+    public GemEmpoweringRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> inputItems,
+                               int craftTime, int energyAmount, FluidStack fluidStack) {
         this.inputItems = inputItems;
         this.output = output;
         this.id = id;
+        this.craftTime = craftTime;
+        this.energyAmount = energyAmount;
+        this.fluidStack = fluidStack;
     }
 
     @Override
@@ -53,6 +62,18 @@ public class GemEmpoweringRecipe implements Recipe<SimpleContainer> {
         return this.inputItems;
     }
 
+    public int getCraftTime() {
+        return craftTime;
+    }
+
+    public int getEnergyAmount() {
+        return energyAmount;
+    }
+
+    public FluidStack getFluidStack() {
+        return fluidStack;
+    }
+
     @Override
     public ResourceLocation getId() {
         return id;
@@ -82,6 +103,8 @@ public class GemEmpoweringRecipe implements Recipe<SimpleContainer> {
         @Override
         public GemEmpoweringRecipe fromJson(ResourceLocation id, JsonObject json) {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
+            FluidStack fluidStack = new FluidStack(ForgeRegistries.FLUIDS.getValue(new ResourceLocation(json.get("fluidType").getAsString())),
+                    json.get("fluidAmount").getAsInt());
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
             NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
@@ -90,28 +113,37 @@ public class GemEmpoweringRecipe implements Recipe<SimpleContainer> {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
             }
 
-            return new GemEmpoweringRecipe(id, output, inputs);
+            int craftTime = json.get("craftTime").getAsInt();
+            int energyAmount = json.get("energyAmount").getAsInt();
+            return new GemEmpoweringRecipe(id, output, inputs, craftTime, energyAmount, fluidStack);
         }
 
         @Override
         public GemEmpoweringRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
             NonNullList<Ingredient> inputs = NonNullList.withSize(buf.readInt(), Ingredient.EMPTY);
+            FluidStack fluidStack = buf.readFluidStack();
 
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromNetwork(buf));
             }
 
+            int craftTime = buf.readInt();
+            int energyAmount = buf.readInt();
             ItemStack output = buf.readItem();
-            return new GemEmpoweringRecipe(id, output, inputs);
+            return new GemEmpoweringRecipe(id, output, inputs, craftTime, energyAmount, fluidStack);
         }
 
         @Override
         public void toNetwork(FriendlyByteBuf buf, GemEmpoweringRecipe recipe) {
             buf.writeInt(recipe.getIngredients().size());
+            buf.writeFluidStack(recipe.fluidStack);
 
             for (Ingredient ing : recipe.getIngredients()) {
                 ing.toNetwork(buf);
             }
+
+            buf.writeInt(recipe.craftTime);
+            buf.writeInt(recipe.energyAmount);
             buf.writeItemStack(recipe.getResultItem(null), false);
         }
     }

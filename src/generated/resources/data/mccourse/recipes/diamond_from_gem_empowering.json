@@ -1,5 +1,9 @@
 {
   "type": "mccourse:gem_empowering",
+  "craftTime": 40,
+  "energyAmount": 150,
+  "fluidAmount": 500,
+  "fluidType": "minecraft:lava",
   "ingredients": [
     {
       "item": "minecraft:coal"

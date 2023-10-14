@@ -88,6 +88,12 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 78;
+    private final int DEFAULT_MAX_PROGRESS = 78;
+
+    private int energyAmount = 0;
+    private final int DEFAULT_ENERGY_AMOUNT = 100;
+
+    private FluidStack neededFluidStack = FluidStack.EMPTY;
 
     private final ModEnergyStorage ENERGY_STORAGE = createEnergyStorage();
     private final FluidTank FLUID_TANK = createFluidTank();
@@ -239,6 +245,10 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("gem_empowering_station.progress", progress);
+        pTag.putInt("gem_empowering_station.max_progress", maxProgress);
+        pTag.putInt("gem_empowering_station.energy_amount", energyAmount);
+        neededFluidStack.writeToNBT(pTag);
+
         pTag.putInt("energy", ENERGY_STORAGE.getEnergyStored());
         pTag = FLUID_TANK.writeToNBT(pTag);
 
@@ -250,6 +260,9 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("gem_empowering_station.progress");
+        maxProgress = pTag.getInt("gem_empowering_station.max_progress");
+        energyAmount = pTag.getInt("gem_empowering_station.energy_amount");
+        neededFluidStack = FluidStack.loadFluidStackFromNBT(pTag);
         ENERGY_STORAGE.setEnergy(pTag.getInt("energy"));
         FLUID_TANK.readFromNBT(pTag);
 
@@ -275,7 +288,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     }
 
     private void extractFluid() {
-        this.FLUID_TANK.drain(500, IFluidHandler.FluidAction.EXECUTE);
+        this.FLUID_TANK.drain(neededFluidStack.getAmount(), IFluidHandler.FluidAction.EXECUTE);
     }
 
     private void fillUpOnFluid() {
@@ -289,10 +302,8 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
             int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
 
             FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
-            if(stack.getFluid() == Fluids.WATER) {
-                stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
-                fillTankWithFluid(stack, iFluidHandlerItem.getContainer());
-            }
+            stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+            fillTankWithFluid(stack, iFluidHandlerItem.getContainer());
         });
     }
 
@@ -309,7 +320,7 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     }
 
     private void extractEnergy() {
-        this.ENERGY_STORAGE.extractEnergy(100, false);
+        this.ENERGY_STORAGE.extractEnergy(energyAmount, false);
     }
 
     private void fillUpOnEnergy() {
@@ -351,6 +362,11 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
         if (recipe.isEmpty()) {
             return false;
         }
+
+        maxProgress = recipe.get().getCraftTime();
+        energyAmount = recipe.get().getEnergyAmount();
+        neededFluidStack = recipe.get().getFluidStack();
+
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
@@ -359,11 +375,11 @@ public class GemEmpoweringStationBlockEntity extends BlockEntity implements Menu
     }
 
     private boolean hasEnoughFluidToCraft() {
-        return this.FLUID_TANK.getFluidAmount() >= 500;
+        return this.FLUID_TANK.getFluidAmount() >= neededFluidStack.getAmount();
     }
 
     private boolean hasEnoughEnergyToCraft() {
-        return this.ENERGY_STORAGE.getEnergyStored() >= 100 * maxProgress;
+        return this.ENERGY_STORAGE.getEnergyStored() >= energyAmount * maxProgress;
     }
 
     private Optional<GemEmpoweringRecipe> getCurrentRecipe() {
