@@ -19,8 +19,10 @@ import net.kaupenjoe.mccourse.painting.ModPaintings;
 import net.kaupenjoe.mccourse.particle.ModParticles;
 import net.kaupenjoe.mccourse.potion.BetterBrewingRecipe;
 import net.kaupenjoe.mccourse.potion.ModPotions;
+import net.kaupenjoe.mccourse.recipe.KaupenFurnaceRecipe;
 import net.kaupenjoe.mccourse.recipe.ModRecipes;
 import net.kaupenjoe.mccourse.screen.GemEmpoweringStationScreen;
+import net.kaupenjoe.mccourse.screen.KaupenFurnaceScreen;
 import net.kaupenjoe.mccourse.screen.ModMenuTypes;
 import net.kaupenjoe.mccourse.sound.ModSounds;
 import net.kaupenjoe.mccourse.util.ModWoodTypes;
@@ -55,6 +57,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import terrablender.api.SurfaceRuleManager;
+
+import java.awt.*;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCCourseMod.MOD_ID)
@@ -147,6 +151,7 @@ public class MCCourseMod {
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_SOAP_WATER.get(), RenderType.translucent());
 
                 MenuScreens.register(ModMenuTypes.GEM_EMPOWERING_MENU.get(), GemEmpoweringStationScreen::new);
+                MenuScreens.register(ModMenuTypes.KAUPEN_FURNACE_MENU.get(), KaupenFurnaceScreen::new);
 
                 EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
                 EntityRenderers.register(ModEntities.DICE_PROJECTILE.get(), ThrownItemRenderer::new);

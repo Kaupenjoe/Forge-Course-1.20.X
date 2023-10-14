@@ -17,6 +17,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<GemEmpoweringStationMenu>> GEM_EMPOWERING_MENU =
             registerMenuType(GemEmpoweringStationMenu::new, "gem_empowering_menu");
 
+    public static final RegistryObject<MenuType<KaupenFurnaceMenu>> KAUPEN_FURNACE_MENU =
+            registerMenuType(KaupenFurnaceMenu::new, "kaupen_furnace_menu");
+
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name) {
         return MENUS.register(name, () -> IForgeMenuType.create(factory));

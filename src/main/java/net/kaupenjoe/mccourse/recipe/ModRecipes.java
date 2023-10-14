@@ -14,6 +14,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<GemEmpoweringRecipe>> GEM_EMPOWERING_SERIALIZER =
             SERIALIZERS.register("gem_empowering", () -> GemEmpoweringRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<KaupenFurnaceRecipe>> KAUPEN_FURNACE_SERIALIZER =
+            SERIALIZERS.register("kaupen_furnace", () -> KaupenFurnaceRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }
